@@ -1,46 +1,164 @@
-/* body {
-    font-family: Arial, sans-serif;
-    margin: 50px;
-}
- */
-body{
+/* Default (Light) Theme */
+body {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 50px;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    height: 100vh;
+    background-color: #f0f8ff; /* Light background */
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    transition: background-color 0.3s, color 0.3s;
 }
-section{
+
+section {
     display: block;
     justify-content: center;
     text-align: center;
-    background-color: antiquewhite;
-    padding: 10vw;
-    margin: 6vh;
-    border: 2px dotted black;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-#text{
+    background-color: #ffffff; /* White background for content */
+    padding: 3rem;
+    margin: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 6px 20px rgba(0, 0, 0, 0.1);
     width: 100%;
-    height: 100px;
-    border-radius: 3px;
-    border: none;
-}
-span{
-    color: blue;
-}
-button {
-    box-shadow: 10px 5px 5px lightblue;
-    margin-top: 20px;
-    padding: 10px 20px;
-    font-size: 16px;
-    border-radius: 5px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    max-width: 600px;
+    transition: background-color 0.3s, box-shadow 0.3s;
 }
 
-button:hover{
-    background-color: rgb(92, 185, 92);
-    box-shadow: 10px 10px 10px lightblue;
-    transition: .5s;
+h1 {
+    font-size: 2.5rem;
+    color: #333;
+    text-decoration: underline;
+    margin-bottom: 1rem;
+}
+
+h1 span {
+    color: #4caf50; /* Green accent */
+}
+
+textarea {
+    width: 100%;
+    height: 150px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    resize: vertical;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+textarea:focus {
+    border-color: #4caf50;
+}
+
+label {
+    font-size: 1rem;
+    color: #555;
+    margin-right: 10px;
+}
+
+select {
+    padding: 8px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background-color: #f4f4f4;
+    margin-bottom: 1.5rem;
+    transition: background-color 0.3s;
+}
+
+button {
+    background-color: #4caf50; /* Green button */
     color: white;
+    padding: 12px 20px;
+    font-size: 1rem;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+}
+
+button:active {
+    transform: scale(1);
+}
+
+button:focus {
+    outline: none;
+}
+
+/* Floating theme toggle button */
+#theme-toggle {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #4caf50;
+    color: white;
+    padding: 15px;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    cursor: pointer;
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+#theme-toggle:hover {
+    background-color: #45a049;
+    transform: scale(1.1);
+}
+
+#theme-toggle:active {
+    transform: scale(1);
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+body.dark-mode section {
+    background-color: #1e1e1e;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1), 0 6px 20px rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode textarea {
+    background-color: #333;
+    border-color: #555;
+    color: #e0e0e0;
+}
+
+body.dark-mode h1 u {
+    color: grey;
+}
+
+body.dark-mode select {
+    background-color: #444;
+    border-color: #555;
+    color: #e0e0e0;
+}
+
+body.dark-mode button {
+    background-color: #333;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode button:hover {
+    background-color: #666;
+}
+
+body.dark-mode #theme-toggle {
+    background-color: #333;
+    color: #fff;
+}
+
+body.dark-mode #theme-toggle:hover {
+    background-color: #666;
 }
