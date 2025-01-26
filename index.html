@@ -7,11 +7,30 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <section>
+  <section>
     <h1> <u>Text to Speech </u><span>Converter</span></h1>
     <textarea id="text" placeholder="Enter text here..."></textarea><br>
+
+    <!-- Pitch selection dropdown -->
+    <label for="pitch">Choose Pitch: </label>
+    <select id="pitch">
+        <option value="0.5">Low</option>
+        <option value="1">Normal</option>
+        <option value="2">High</option>
+    </select><br>
+
+    <!-- Voice selection dropdown -->
+    <label for="voice">Choose Voice: </label>
+    <select id="voice"></select><br>
+
     <button onclick="convertTextToSpeech()">Convert to Speech</button>
 </section>
+
+<!-- Floating Theme Toggle Button -->
+<button id="theme-toggle" onclick="toggleTheme()">🌙</button>
+
+
+
     <script src="app.js"></script>
 </body>
 </html>
